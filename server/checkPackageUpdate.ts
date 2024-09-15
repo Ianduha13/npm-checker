@@ -7,7 +7,7 @@ type Index<T> = Record<string, T>;
 
 export async function checkPackageUpdates(packageJson: string) {
   if (!packageJson) {
-    return { error: 'No se proporcionó package.json' };
+    return { error: 'There was an error recovering your package.json' };
   }
 
   let parsedPackageJson;
@@ -15,7 +15,7 @@ export async function checkPackageUpdates(packageJson: string) {
   try {
     parsedPackageJson = JSON.parse(packageJson);
   } catch (error) {
-    return { error: 'package.json inválido' };
+    return { error: 'Invalid package.json ' };
   }
 
   const upgrades = (await ncu({ packageData: packageJson, upgrade: false, jsonUpgraded: true, })) as Index<string>;

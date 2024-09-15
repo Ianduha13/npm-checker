@@ -20,8 +20,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Npm Update Check",
-  description: "A simple tool to check for updates in your package.json",
+  title: "Npm Checker",
+  description: "A simple free-to-use tool to check for updates in your package.json",
 };
 
 export default function RootLayout({

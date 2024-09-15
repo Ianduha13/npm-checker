@@ -52,7 +52,7 @@ const HomePage = () => {
         </label>
 
       <Button onClick={handleAnalyze} disabled={loading || !packageJsonContent} className='mt-4'>
-        {loading ? 'Analyzing...' : 'Analyze Dependencies'}
+        {loading ? 'Checking new versions...' : 'Check Dependencies'}
       </Button>
       </div>
 
