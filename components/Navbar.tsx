@@ -35,7 +35,7 @@ export default function Navbar() {
         </Link>
         <ul className=' sm:flex items-center h-full gap-2'>
           <li className='hidden sm:inline-flex'>
-            <GitHubStars repoUrl='https://github.com/Ianduha13/npm-check' repoName='Ianduha13/npm-check'/>
+            <GitHubStars repoUrl='https://github.com/Ianduha13/npm-checker' repoName='Ianduha13/npm-checker'/>
           </li>
           <li>
             <ModeToggle />
