@@ -12,7 +12,7 @@ import { Update } from '@/app/page'
 
 export function UpdatesTable({ updates } : { updates: Update[] }) {
   return (
-    <ScrollArea className='relative h-[720px] max-h-[720px]'>
+    <ScrollArea className='relative  max-h-[720px]'>
     <Table className='w-full table-fixed'>
       <TableHeader >
         <TableRow>
@@ -23,10 +23,10 @@ export function UpdatesTable({ updates } : { updates: Update[] }) {
         </TableRow>
       </TableHeader>
 
-        <TableBody className='overflow-y-auto h-[600px]'>
+        <TableBody className=''>
           {updates.map((update) => (
             <TableRow key={update?.package}
-              className={`hover:brightness-110 ${update?.updateType === "major" ? "bg-red-500/20" :
+              className={`h-fit hover:brightness-110 ${update?.updateType === "major" ? "bg-red-500/20" :
                 update?.updateType === "patch" ? "bg-slate-300/20" : "bg-yellow-500/20"}`}>
               <TableCell>{update?.package}</TableCell>
               <TableCell className='text-center'>{update?.currentVersion}</TableCell>
